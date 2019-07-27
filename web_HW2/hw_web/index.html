@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start();?>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -24,6 +25,7 @@
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
 </head>
+    
 <body>
 <div class="container">
 	<div class="row">
@@ -50,13 +52,13 @@
                             <!-- Username -->
                             <label class="control-label"  for="username">Username</label>
                             <div class="controls">
-                              <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                              <input type="text" id="username" name="username" placeholder="" class="input-xlarge" required="required">
                             </div>
                           </div>
      
                           <div class="control-group">
                             <!-- Password-->
-                            <label class="control-label" for="password">Password</label>
+                            <label class="control-label" for="password" required="required">Password</label>
                             <div class="controls">
                               <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
                             </div>
@@ -75,13 +77,13 @@
                     <div class="tab-pane fade" id="create">
                       <form action="signup.php" method="post">
                         <label>Username</label>
-                        <input type="text" value="" class="input-xlarge" name="username">
+                        <input type="text" value="" class="input-xlarge" name="username" required="required">
                         <label>Email Address</label>
-                        <input type="text" value="" class="input-xlarge" name="email">
+                        <input type="text" value="" class="input-xlarge" name="email" required="required">
                         <label>Password</label>
-                        <input type="text" value="" class="input-xlarge" name="password">
+                        <input type="password" value="" class="input-xlarge" name="password" required="required">
                         <label>Confirm Password</label>
-                        <input type="text" value="" class="input-xlarge">
+                        <input type="password" value="" name="repassword" class="input-xlarge">
 			
 			             <label>Radio Buttons</label>
 			             <input type="radio" name="sex" value="male" checked> Male 

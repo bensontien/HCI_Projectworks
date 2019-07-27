@@ -1,4 +1,7 @@
 <?PHP
+
+session_start();
+
 header("Content-Type: text/html; charset=utf8");
 if(!isset($_POST["login"])){
 exit("Wrong");
@@ -10,7 +13,7 @@ $password = "sheisyuri0405";
 $dbname = "hw_web";
 
 $username_form = $_POST['username'];//post獲得使用者名稱
-$passowrd_form = $_POST['password'];//post獲得使用者密碼單值
+$passowrd_form = $_POST['password'];//post獲得使用者密碼
 
 $result='';
 $num_rows='';
@@ -38,20 +41,20 @@ if ($username_form && $passowrd_form){
     $conn->query('set names utf8;');
     $result = $conn->query($sql);
     $num_rows = $result->fetchAll();
-    //$num_rows=mysqli_num_rows($result);//返回一個數值
+
     
     
     if($num_rows){//0 false 1 true
-        echo "Login successfully";
-        header("refresh:0;url=homepage.html");//如果成功跳轉至welcome.html頁面
+        $_SESSION["username"] = $username_form;
+        header("refresh:0;url=homepage.html");//如果成功跳轉至homepage.html頁面
         exit;
     }else{
-        echo "使用者名稱或密碼錯誤";
+        echo "Wrong Username or Password, after 3 seconds go back login page";
         echo "
             <script>
-            setTimeout(function(){window.location.href='login.html';},1000);
+            setTimeout(function(){window.location.href='index.html';},3000);
             </script>
-            ";//如果錯誤使用js 1秒後跳轉到登入頁面重試;
+            ";
     }
 
 
