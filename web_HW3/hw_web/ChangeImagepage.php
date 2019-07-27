@@ -114,8 +114,8 @@
             <form  method="post" enctype="multipart/form-data"> 
                 
            
-            <br><h3>Select file to upload(File must be under 2MB):</h3>
-            <br><input class="btn dropdown-toggle " type="file" name="file" id="file">
+            <br><h3>Select image to upload:</h3>
+            <br><input class="btn dropdown-toggle " type="file" name="image" id="image">
             
             <input class="btn dropdown-toggle btn-info" type="submit" name="upload" value="UPLOAD" class="btn btn-primary" class="icon-upload icon-white"><br>
                 
@@ -124,13 +124,18 @@
             if (isset($_POST['upload'])){
                 
                 $errors = array();
+                $allowed_e = array('png','jpg','jpeg');
                 
-                $file_name = $_FILES['file']['name'];
+                $file_name = $_FILES['image']['name'];
                 $file_e = strtolower (pathinfo($file_name, PATHINFO_EXTENSION));
-                $file_s = $_FILES['file']['size'];
-                $file_tmp = $_FILES['file']['tmp_name'];
-                $time = date("Y-m-d");
+                $file_s = $_FILES['image']['size'];
+                $file_tmp = $_FILES['image']['tmp_name'];
                 
+                if (in_array($file_e, $allowed_e) == false){
+                    
+                    $errors[] = 'This file extension is not allowed.';
+                    
+                }
                 
                 if ($file_s > 2097152){
                     
@@ -140,15 +145,21 @@
                 
                 if (empty($errors)){
                     
-                    move_uploaded_file($file_tmp, 'files/'.$file_name);
-                    $files_up = 'files/'.$file_name;
+                    move_uploaded_file($file_tmp, 'images/'.$file_name);
+                    $image_up = 'images/'.$file_name;
                     
-                        
-                        $sql = "INSERT INTO file (fileid,username,filename,filesize,time) VALUES (null,'$username_form','$file_name','$file_s','$time')";
+                   
+
+                        $sql = "UPDATE user SET profile_pic='".$image_up."' WHERE username = '$username_form'";
                         $stmt = $conn->prepare($sql);
                         $stmt->execute();
                         echo $stmt->rowCount() . " UPDATED successfully";
-                
+                    
+                        echo "
+                            <script>
+                            setTimeout(function(){window.location.href='homepage.php';},3000);
+                            </script>
+                             ";
                     
                 }else{
                     
@@ -171,44 +182,7 @@
         </div>
 </div>
 </div>
-<div class="container-fluid well span12">
-    <h3 style="color:Black;">File List</h3>
-    <form action="homepage.php" method="post">
-        <table style="width:100%" id="t01">
-            <tr>
-                
-                <th>Filename</th>
-                <th>Filesize</th>
-                <th>DATE</th>
-   
-            </tr>
-            
-            <tr>
-            
-            <?php
-            
-                $sql = "select * from file where username = '$username_form'";
-                $conn->query('set names utf8;');
-                $result = $conn->query($sql);
-                $rows = $result->fetchAll();
-            
-                foreach ($rows as $row) {
-                    
-                    echo "<tr>";
-                    echo "<td>$row[2]</td>";
-                    echo "<td>$row[3]</td>";
-                    echo "<td>$row[4]</td>";
-                    echo "</tr>";
-                }
-            
-            ?>
-            
-            </tr>
-            
-        </table>    
-    </form>   
-    
-</div>
+
 
 <script type="text/javascript">
 

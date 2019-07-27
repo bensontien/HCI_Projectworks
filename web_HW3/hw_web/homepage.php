@@ -109,7 +109,8 @@
                     <span class="icon-user icon-white"></span><span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="uploadpage.php"><span class="icon-picture"></span> Update your Image</a></li>
+                    <li><a href="ChangeImagepage.php"><span class="icon-picture"></span> Update your Image</a></li>
+                    <li><a href="uploadpage.php"><span class="icon-file"></span> Upload your File</a></li>
 <!--                    <li><a href="#"><span class="icon-pencil"></span> Update your info</a></li>-->
                     <li><a href="index.html" action = logout> Logout</a></li>
                 </ul>
