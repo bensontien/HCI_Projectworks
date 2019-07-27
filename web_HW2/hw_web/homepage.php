@@ -27,7 +27,11 @@
 
     $username_form = $_SESSION["username"];
     $password_form = $_SESSION["password"];
-
+    
+    $sql = "select * from user where username = '$username_form' and password='$password_form'";
+    $conn->query('set names utf8;');
+    $result = $conn->query($sql);
+    $rows = $result->fetchAll();
 
         if(@$_SESSION["username"]){
            
@@ -63,6 +67,11 @@
     table#t01 th {
         background-color: lightblue;
         color: white;
+        text-align: center
+        }
+    table#t01 td {
+        text-align: center
+        
         }
 	
         
@@ -72,23 +81,16 @@
 </head>
 <body>
 <br><br>
-<div class="container-fluid well span12">
+<div class="container-fluid well span3">
 	<div class="row-fluid">
-        <div class="span2" >
-		    <img src="https://secure.gravatar.com/avatar/de9b11d0f9c0569ba917393ed5e5b3ab?s=140&r=g&d=mm" class="img-circle">
-        </div>
         
-        <div class="span8">
+        <div class="span7">
             
             <?php
-            
-                $sql = "select * from user where username = '$username_form' and password='$password_form'";
-                $conn->query('set names utf8;');
-                $result = $conn->query($sql);
-                $rows = $result->fetchAll();
-            
+
                 foreach ($rows as $row) {
                     
+                    echo "<img src='".$row[5]."' class='img-circle' width='200' height='200'>";
                     echo "<h3>$row[1]</h3>";
                     echo "<h4>Email: $row[2]</h4>";
                     echo "<h4>Sex: $row[4]</h4>";
@@ -100,14 +102,14 @@
             
         </div>
         
-        <div class="span2">
+        <div >
             <div class="btn-group">
                 <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" >
                     USER 
                     <span class="icon-user icon-white"></span><span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="#"><span class="icon-picture"></span> Update your Image</a></li>
+                    <li><a href="uploadpage.php"><span class="icon-picture"></span> Update your Image</a></li>
                     <li><a href="#"><span class="icon-pencil"></span> Update your info</a></li>
                     <li><a href="index.html" action = logout> Logout</a></li>
                 </ul>
@@ -121,6 +123,7 @@
         <table style="width:100%" id="t01">
             <tr>
                 
+                <th>Icon</th>
                 <th>UserID</th>
                 <th>Username</th>
                 <th>Email</th>
@@ -140,6 +143,7 @@
                 foreach ($rows as $row) {
                     
                     echo "<tr>";
+                    echo "<td><img src='".$row[5]."' class='img-circle' width='100' height='100'></td>";
                     echo "<td>$row[0]</td>";
                     echo "<td>$row[1]</td>";
                     echo "<td>$row[2]</td>";
