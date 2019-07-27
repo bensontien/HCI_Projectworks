@@ -13,7 +13,7 @@ $password = "sheisyuri0405";
 $dbname = "hw_web";
 
 $username_form = $_POST['username'];//post獲得使用者名稱
-$passowrd_form = $_POST['password'];//post獲得使用者密碼
+$password_form = $_POST['password'];//post獲得使用者密碼
 
 $result='';
 $num_rows='';
@@ -35,8 +35,8 @@ catch(PDOException $e)
     }
 
 
-if ($username_form && $passowrd_form){
-            $sql = "select * from user where username = '$username_form' and password='$passowrd_form'";}
+if ($username_form && $password_form){
+            $sql = "select * from user where username = '$username_form' and password='$password_form'";}
     
     $conn->query('set names utf8;');
     $result = $conn->query($sql);
@@ -46,7 +46,8 @@ if ($username_form && $passowrd_form){
     
     if($num_rows){//0 false 1 true
         $_SESSION["username"] = $username_form;
-        header("refresh:0;url=homepage.html");//如果成功跳轉至homepage.html頁面
+        $_SESSION["password"] = $password_form;
+        header("refresh:0;url=homepage.php");//如果成功跳轉至homepage.html頁面
         exit;
     }else{
         echo "Wrong Username or Password, after 3 seconds go back login page";
