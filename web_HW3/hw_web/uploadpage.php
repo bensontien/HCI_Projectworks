@@ -80,6 +80,16 @@
 <div class="container-fluid well span0">
 	<div class="row-fluid">
         
+        <div class="btn-group">
+                <a class="btn dropdown-toggle btn-info" data-toggle="dropdown" >
+                    USER 
+                    <span class="icon-user icon-white"></span><span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="homepage.php"><span class="icon-home"></span> HomePage</a></li>
+                    <li><a href="index.html" action = logout> Logout</a></li>
+                </ul>
+            </div>
         
         <div class="span10">
             

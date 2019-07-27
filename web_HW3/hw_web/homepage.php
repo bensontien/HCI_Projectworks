@@ -110,7 +110,7 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li><a href="uploadpage.php"><span class="icon-picture"></span> Update your Image</a></li>
-                    <li><a href="#"><span class="icon-pencil"></span> Update your info</a></li>
+<!--                    <li><a href="#"><span class="icon-pencil"></span> Update your info</a></li>-->
                     <li><a href="index.html" action = logout> Logout</a></li>
                 </ul>
             </div>
