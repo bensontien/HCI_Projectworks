@@ -19,6 +19,7 @@ $email=$_POST['email'];//post獲取表單裡的email
 $password_form=$_POST['password'];//post獲取表單裡的password
 $repassword_form=$_POST['repassword'];//post獲取表單裡的repassword
 $sex=$_POST['sex'];//post獲取表單裡的sex
+$default_image = serialize(glob('./images/default_pic.jpg'));
 
 try {
     
@@ -35,8 +36,8 @@ try {
             
             if($repassword_form == $password_form){
               
-                //插入資訊
-            $sql = "INSERT INTO user (userid,username,email,password,sex) VALUES (null,'$username_form','$email','$password_form','$sex')";
+            //插入資訊
+            $sql = "INSERT INTO user (userid,username,email,password,sex,profile_pic) VALUES (null,'$username_form','$email','$password_form','$sex','$default_image')";
             // use exec() because no results are returned
             $conn->exec($sql);
     
