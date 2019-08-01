@@ -562,6 +562,14 @@ body {
     <h3 style="color:Black;">Reply List</h3>
     <form method="post">
         
+        <br/><h5>Which Reply do you want to delete?</h5>
+        <input type="text" name ="replytodelete"><span class="icon-white" ></span><br/><br/>
+        
+        <br/><h5>Timestamp?</h5>
+        <input type="text" name ="lastreplytimetodelete"><span class="icon-white" ></span><br/><br/>
+        
+        <input type="submit" name ="deletereply" class="btn btn-primary" value="delete"><br/>
+        
         
         <br/><h5>Which Reply do you want to edit?</h5>
         <input type="text" name ="replybeforetext"><span class="icon-white" ></span><br/><br/>
@@ -572,7 +580,7 @@ body {
         <br/><h5>Edit content:</h5>
         <input type="text" name ="replyaftertext"><span class="icon-white" ></span><br/><br/>
         
-        <input type="submit" name ="editreply" class="btn btn-primary" value="edit"><span class="icon-trash icon-white" ></span><br/>
+        <input type="submit" name ="editreply" class="btn btn-primary" value="edit"><br/>
         
         <br/>
         <table style="width:100%" id="t01">
@@ -602,6 +610,21 @@ body {
                     echo "</tr>";
                 }
             
+            if(isset($_POST['deletereply'])){
+                
+                
+                                
+            $last_reply =  @$_POST['replytodelete'];              
+            $timeforsure_delete =  @$_POST['lastreplytimetodelete'];                   
+                
+            $sql = "DELETE FROM replies WHERE comment='$last_reply' and date = '$timeforsure_delete ' and reply_creator = '$username_form'";
+            $conn->exec($sql); 
+                
+//            echo "<p style=color:Tomato;'>You can not edit this reply</p><br/>";
+                  
+   
+            }
+            
             if(isset($_POST['editreply'])){
                 
                 
@@ -620,11 +643,7 @@ body {
                 
                 
 //            echo "<p style=color:Tomato;'>You can not edit this reply</p><br/>";
-                
-            
-                                
-            
-  
+                  
    
             }
             
