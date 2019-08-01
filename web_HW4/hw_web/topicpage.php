@@ -440,6 +440,7 @@ body {
                             
                             <?php 
                             
+                            echo "<h6>Poster:</h6>";
                             echo "<h2>".$topic_creator."</h2>";
                             echo "<h6>Last time</h6>";
                             echo "<h7>".$date."</h7><br/>";
