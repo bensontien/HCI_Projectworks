@@ -1,0 +1,36 @@
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\objd\amd64\whatstheweatherlike.wav
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\objd\amd64\speechtotext-wpf.exe.config
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\objd\amd64\speechtotext-wpf.exe
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\objd\amd64\speechtotext-wpf.pdb
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\objd\amd64\Microsoft.CognitiveServices.Speech.csharp.dll
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\objd\amd64\Microsoft.CognitiveServices.Speech.csharp.xml
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf.csprojAssemblyReference.cache
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\MainWindow.baml
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\MainWindow.g.cs
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\App.g.cs
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf_Content.g.cs
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf_MarkupCompile.cache
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf.g.resources
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf.csproj.CoreCompileInputs.cache
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf.csproj.CopyComplete
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf.exe
+D:\Azure Sample\cognitive-services-speech-sdk-master\samples\csharp\dotnet-windows\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf.pdb
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\objd\amd64\whatstheweatherlike.wav
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\objd\amd64\Microsoft.CognitiveServices.Speech.core.dll
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\objd\amd64\Microsoft.CognitiveServices.Speech.extension.kws.dll
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\objd\amd64\speechtotext-wpf.exe.config
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\objd\amd64\speechtotext-wpf.exe
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\objd\amd64\speechtotext-wpf.pdb
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\objd\amd64\Microsoft.CognitiveServices.Speech.csharp.dll
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\objd\amd64\Microsoft.CognitiveServices.Speech.csharp.xml
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf.csprojAssemblyReference.cache
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\MainWindow.baml
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\MainWindow.g.cs
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\App.g.cs
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf_Content.g.cs
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf_MarkupCompile.cache
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf.g.resources
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf.csproj.CoreCompileInputs.cache
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf.csproj.CopyComplete
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf.exe
+D:\HCI\2019summer\HCI_homework\Azure\speechtotext-wpf\speechtotext-wpf\obj\x64\Debug\speechtotext-wpf.pdb
