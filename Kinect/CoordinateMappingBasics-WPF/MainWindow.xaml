@@ -1,0 +1,98 @@
+﻿<Window x:Class="Microsoft.Samples.Kinect.CoordinateMappingBasics.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Coordinate Mapping Basics" 
+        Height="600" Width="700" 
+        Closing="MainWindow_Closing">
+    <Window.Resources>
+        <SolidColorBrush x:Key="MediumGreyBrush" Color="#ff6e6e6e" />
+        <SolidColorBrush x:Key="KinectPurpleBrush" Color="#ff52318f" />
+        <SolidColorBrush x:Key="KinectBlueBrush" Color="#ff00BCF2" />
+        <Style TargetType="{x:Type Image}">
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+        </Style>
+        <Style TargetType="{x:Type Button}" x:Key="ScreenshotButton" >
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <StackPanel Orientation="Horizontal" Background="Transparent">
+                                <TextBlock x:Name="ScreenshotText" Text="{TemplateBinding Content}" TextAlignment="Left"  VerticalAlignment="Center" Foreground="{StaticResource KinectPurpleBrush}" FontSize="15" />
+                                <Grid Margin="9,0,0,0">
+                                    <Image x:Name="ScreenshotNormal" Source="Images\ScreenshotNormal.png" Stretch="None" HorizontalAlignment="Center" />
+                                    <Image x:Name="ScreenshotHover" Source="Images\ScreenshotHover.png" Stretch="None" HorizontalAlignment="Center" Visibility="Collapsed" />
+                                </Grid>
+                            </StackPanel>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Visibility" Value="Collapsed" TargetName="ScreenshotNormal" />
+                                <Setter Property="Visibility" Value="Visible" TargetName="ScreenshotHover" />
+                                <Setter Property="Foreground" Value="{StaticResource KinectBlueBrush}" TargetName="ScreenshotText" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="10 0 10 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Image Grid.Row="0" Source="Images\Logo.png" HorizontalAlignment="Left" Stretch="Fill" Height="32" Width="81" Margin="0 10 0 5" />
+        <TextBlock Grid.Row="0" Margin="0 0 -1 0" HorizontalAlignment="Right" VerticalAlignment="Bottom" Foreground="{StaticResource MediumGreyBrush}" FontFamily="Segoe UI" FontSize="18">Coordinate Mapping Basics</TextBlock>
+        <Image Grid.Row="0" Source="Images\Status.png" Stretch="None" HorizontalAlignment="Center" Margin="0 0 0 5" />
+
+        <Viewbox Grid.Row="1" HorizontalAlignment="Center">
+            <Grid Name="CompositeImage" Height="189" Width="517">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="185*"/>
+                    <RowDefinition Height="4*"/>
+                </Grid.RowDefinitions>
+                <Image Name="BackGroundImage" Stretch="UniformToFill" Margin="0,0,0,-61" Grid.RowSpan="2" />
+                <Image Source="{Binding ImageSource}" Stretch="UniformToFill" Margin="0,0,0,-61" Grid.RowSpan="2" />
+                <Image Name="ForeGroundImage" Margin="200,150,0,-61" Grid.RowSpan="2" Panel.ZIndex="1" />
+
+            </Grid>
+        </Viewbox>
+
+        <Button Grid.Row="2" Style="{StaticResource ScreenshotButton}" Content="Screenshot" Height="Auto" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10 10 0 10" Click="ScreenshotButton_Click" />
+
+        <StatusBar Grid.Row="3" HorizontalAlignment="Stretch" Name="statusBar" VerticalAlignment="Bottom" Background="White" Foreground="{StaticResource MediumGreyBrush}">
+            <StatusBarItem Content="{Binding StatusText}" />
+        </StatusBar>
+
+        <Label Content="背景" HorizontalAlignment="Left" Margin="74,30,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <ComboBox x:Name="Background" HorizontalAlignment="Left" Margin="30,60,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem Tag="default" IsSelected="true">Default</ComboBoxItem>
+            <ComboBoxItem Tag="japan">Japan</ComboBoxItem>
+            <ComboBoxItem Tag="taiwan">Taiwan</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="Item" HorizontalAlignment="Left" Margin="194,60,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Tag="item1" IsSelected="True">item_1</ComboBoxItem>
+            <ComboBoxItem Tag="item2">item_2</ComboBoxItem>
+            <ComboBoxItem Tag="item3">item_3</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="Foreground" HorizontalAlignment="Left" Margin="353,60,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120" SelectionChanged="Foreground_SelectionChanged">
+            <ComboBoxItem Tag="foreground1" IsSelected="true">foreground_1</ComboBoxItem>
+            <ComboBoxItem Tag="foreground2">foreground_2</ComboBoxItem>
+            <ComboBoxItem Tag="foreground3">foreground_3</ComboBoxItem>
+        </ComboBox>
+        <ComboBox x:Name="Clothe" HorizontalAlignment="Left" Margin="516,60,0,0" Grid.Row="1" VerticalAlignment="Top" Width="120">
+            <ComboBoxItem Tag="clothe1" IsSelected="true">clothe_1</ComboBoxItem>
+            <ComboBoxItem Tag="clothe2">clothe_2</ComboBoxItem>
+            <ComboBoxItem Tag="clothe3">clothe_3</ComboBoxItem>
+        </ComboBox>
+        <Label Content="道具" HorizontalAlignment="Left" Margin="239,30,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="前景" HorizontalAlignment="Left" Margin="397,30,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        <Label Content="服裝" HorizontalAlignment="Left" Margin="552,30,0,0" Grid.Row="1" VerticalAlignment="Top"/>
+        
+
+
+    </Grid>
+</Window>

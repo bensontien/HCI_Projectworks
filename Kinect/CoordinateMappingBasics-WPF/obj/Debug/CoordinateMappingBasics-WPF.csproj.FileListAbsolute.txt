@@ -1,0 +1,17 @@
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\bin\AnyCPU\Debug\CoordinateMappingBasics-WPF.exe.config
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\bin\AnyCPU\Debug\CoordinateMappingBasics-WPF.exe
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\bin\AnyCPU\Debug\CoordinateMappingBasics-WPF.pdb
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\bin\AnyCPU\Debug\Microsoft.Kinect.dll
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\bin\AnyCPU\Debug\Microsoft.Kinect.xml
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\obj\Debug\CoordinateMappingBasics-WPF.csprojAssemblyReference.cache
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\obj\Debug\MainWindow.baml
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\obj\Debug\MainWindow.g.cs
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\obj\Debug\App.g.cs
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\obj\Debug\CoordinateMappingBasics-WPF_MarkupCompile.cache
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\obj\Debug\CoordinateMappingBasics-WPF.g.resources
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\obj\Debug\Microsoft.Samples.Kinect.CoordinateMappingBasics.Properties.Resources.resources
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\obj\Debug\CoordinateMappingBasics-WPF.csproj.GenerateResource.cache
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\obj\Debug\CoordinateMappingBasics-WPF.csproj.CoreCompileInputs.cache
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\obj\Debug\CoordinateMappingBasics-WPF.csproj.CopyComplete
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\obj\Debug\CoordinateMappingBasics-WPF.exe
+D:\田敬暘的置物櫃\中央\HCI實驗室\HCI暑期課程\Kinect\CoordinateMappingBasics-WPF\obj\Debug\CoordinateMappingBasics-WPF.pdb
