@@ -1,0 +1,14 @@
+﻿<Window x:Class="Wpfcalculater.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpfcalculater"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="delete" Content="刪除" HorizontalAlignment="Left" Margin="516,26,0,0" VerticalAlignment="Top" Width="75" Height="33" Click="Delete_Click"/>
+        <DataGrid x:Name="dtgrid" HorizontalAlignment="Left" Height="326" Margin="0,84,0,0" VerticalAlignment="Top" Width="784" ItemsSource="{Binding}" SelectionChanged="Dtgrid_SelectionChanged"/>
+
+    </Grid>
+</Window>
